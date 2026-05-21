@@ -5,7 +5,13 @@
 import { useCallback, useState } from "react";
 
 export default function App() {
-  const [input, setInput] = useState("");
+ return <>
+  <Assignment2/>
+ </>
+}
+
+function Assignment2() {
+   const [input, setInput] = useState("");
 
   const handleButton = useCallback(() => {
     alert(input);

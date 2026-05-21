@@ -3,6 +3,12 @@
 import { useCallback, useState, memo } from "react";
 
 export default function App(){
+  return <>
+    <Assignment1/>
+  </>
+}
+
+function Assignment1(){
   const [count,setCount] = useState(0);
 
   const handleIncrement = useCallback( () => {
