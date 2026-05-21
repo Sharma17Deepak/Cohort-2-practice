@@ -6,11 +6,11 @@ export default function App(){
   const [count,setCount] = useState(0);
 
   const handleIncrement = useCallback( () => {
-    setCount((count) => {return count+1});
+    setCount(count + 1);
   },[])
     
   const handleDecrement = useCallback(() => {
-    setCount((count) => {return count-1});
+    setCount(count-1);
   },[])
 
   return(
