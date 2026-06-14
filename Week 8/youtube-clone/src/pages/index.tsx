@@ -1,4 +1,5 @@
 import VideoCard from "@/components/VideoCard";
+import VideoGrid from "@/components/VideoGrid";
 import { Geist, Geist_Mono } from "next/font/google";
 
 const geistSans = Geist({
@@ -14,9 +15,7 @@ const geistMono = Geist_Mono({
 export default function Home() {
   return (
     <div>
-      <VideoCard title={"30 days coding challenge | Figuring Out | Raj shamani clips"} image={"image.jpg"}
-      thumbImg={"thumb.jpg"} author={"Raj shamani"} views={"840k"} timestamp={"5 days ago"}
-      ></VideoCard>
+      <VideoGrid/>
     </div>
   );
 }
