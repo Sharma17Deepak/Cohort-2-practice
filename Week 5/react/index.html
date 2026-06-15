@@ -1,0 +1,31 @@
+<!--Learning how react works on backend writing counter code in html css js as react would work-->
+<html>
+
+<body>
+    <div id="container"></div>
+</body>
+<script>
+    let state = { count : 0 };
+
+    function onButtonPress(){
+        state.count++;
+        buttonComponentRerender()
+    }
+
+    function buttonComponentRerender(){
+        document.getElementById("container").innerHTML = "";
+        const component = buttonComponent(state.count);
+        document.getElementById("container").appendChild(component);
+    }
+
+    function buttonComponent(count){
+        const button = document.createElement("button");
+        button.innerHTML = `Counter ${count}`;
+        button.setAttribute("onclick",`onButtonPress()`);
+        return button;
+    }
+
+    buttonComponentRerender();
+</script>
+
+</html>

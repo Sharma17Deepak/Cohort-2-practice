@@ -1,9 +1,9 @@
 <html>
 <script>
-    let timeout = null; //
+    let timeout = null;
     function debounceSum() {
-        clearTimeout(timeout);
-        timeout = setTimeout(function(){
+        clearTimeout(timeout); //clears old clock that was running because again function call happened
+        timeout = setTimeout(function(){  // start new clock again
             calcSum()
         },1000)
     }
@@ -18,6 +18,8 @@
 
 <body>
     <input oninput="debounceSum()" id="num1" type="text" placeholder="Enter a number" /> <br><br />
+    <!--above oninput written so whenever input changes function call happens 
+    -->
     <input oninput="debounceSum()" id="num2" type="text" placeholder="Enter a number" /> <br><br />
     <div id="sum"></div>
 </body>

@@ -33,7 +33,7 @@ app.get("/", (req, res) => {
 app.use(express.json()); // so that body can sen post request in json
 
 //Post method
-// whenever throught postman body is sent inside isHealthy is sent a healthy kidney is added
+// whenever through postman body is sent inside isHealthy is sent a healthy kidney is added
 app.post("/", (req, res) => {
   const isHealthy = req.body.isHealthy;
   allKidneys.push({
@@ -52,7 +52,7 @@ app.put("/", (req, res) => {
     });
     res.json({});
   } else {
-    res.status(411).json({msg:"Already kidney is healthy"})
+    res.status(411).json({msg:"Already all kidneys are healthy"})
   }
 });
 
