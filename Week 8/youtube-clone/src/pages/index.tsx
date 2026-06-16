@@ -1,5 +1,6 @@
-import VideoCard from "@/components/VideoCard";
-import VideoGrid from "@/components/VideoGrid";
+import { LeftBar } from "@/components/LeftBar";
+import NavBar from "@/components/NavBar";
+import { VideoGrid } from "@/components/VideoGrid";
 import { Geist, Geist_Mono } from "next/font/google";
 
 const geistSans = Geist({
@@ -15,7 +16,11 @@ const geistMono = Geist_Mono({
 export default function Home() {
   return (
     <div>
-      <VideoGrid/>
+      <NavBar/> 
+      <div className="flex">
+        <LeftBar />
+        <VideoGrid />
+      </div>
     </div>
   );
 }
