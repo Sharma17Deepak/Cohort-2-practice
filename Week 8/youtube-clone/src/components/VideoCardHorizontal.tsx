@@ -5,11 +5,11 @@ import { Line } from "./Line"
 export const VideoCardHorizontal = ({video}: {video: Video}) => {
     const router = useRouter();
     return <div className="cursor-pointer grid grid-cols-12" onClick={() => {
-        router.push("/video/1");
+        router.push(`/video/${video.id}`);
     }}>
         <div className="rounded-xl overflow-hidden col-span-5">
             <div>
-                <img src={video.thumbnail} />
+                <img src={video.thumbnail} alt={video.title} />
                 <Line progress={10} />
             </div>
         </div>

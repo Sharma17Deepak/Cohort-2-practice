@@ -3,6 +3,6 @@ import { VideoCard } from "./VideoCard"
 
 export const VideoGrid = () => {
     return <div className="grid md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-4">
-        {VIDEOS.map(video => <div className="p-2"> <VideoCard key={video.id} video={video} /> </div>)}
+        {VIDEOS.map(video => <div key={video.id} className="p-2"> <VideoCard video={video} /> </div>)}
     </div>
 }

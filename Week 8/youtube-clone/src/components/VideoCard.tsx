@@ -8,34 +8,35 @@ export const VideoCard = ({ video }: { video: Video }) => {
     <div
       className="cursor-pointer"
       onClick={() => {
-        router.push("/video/1");
+        router.push(`/video/${video.id}`);
       }}
     >
       <div className="rounded-xl overflow-hidden">
         <div>
-          <img src={video.thumbnail} />
-          <Line progress={10} />
+          <img src={video.thumbnail} alt={video.title} />
+          <Line progress={20} />
         </div>
       </div>
       <div className="flex">
-        <div className="col-span-1">
+        <div className="col-span-1 pt-4">
           <img
-            className={"rounded-full w-12 h-12 object-cover"}
+            className={"rounded-full w-16 h-12 object-cover"}
             src={video.channel}
-          ></img>
+            alt={video.description}
+          />
         </div>
-        <div>
-          <div className={"text-white-800 text-xl font-medium"}>
+        <div className="p-4">
+          <div className={"text-white-800 text-sm font-medium"}>
             {video.title}
           </div>
-          <div className={"text-gray-400 text-xl font-normal		"}>
+          <div className={"text-gray-400 text-sm font-normal		"}>
             {video.description}
           </div>
           <div className="flex">
-            <div className={"text-gray-400 text-xl font-normal	pr-2	"}>
+            <div className={"text-gray-400 text-sm font-normal	pr-2	"}>
               {video.viewCount}
             </div>
-            <div className={"text-gray-400 text-xl font-normal		"}>
+            <div className={"text-gray-400 text-sm font-normal		"}>
               • {video.timestamp}
             </div>
           </div>
