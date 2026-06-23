@@ -13,7 +13,7 @@ export const VideoCard = ({ video }: { video: Video }) => {
     >
       <div className="rounded-xl overflow-hidden">
         <div>
-          <img src={video.thumbnail} alt={video.title} />
+          <img src={video.thumbnail} alt={"thumbnail image"} />
           <Line progress={20} />
         </div>
       </div>
@@ -22,7 +22,7 @@ export const VideoCard = ({ video }: { video: Video }) => {
           <img
             className={"rounded-full w-16 h-12 object-cover"}
             src={video.channel}
-            alt={video.description}
+            alt={"channel image"}
           />
         </div>
         <div className="p-4">

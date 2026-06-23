@@ -6,7 +6,6 @@ export const SearchBar = () => {
           id="default-search"
           className="w-full bg-slate-950 text-white border-none outline-none"
           placeholder="Search"
-          required
         />
         <button className="bg-gray-600 font-bold py-2 px-4 rounded-3xl inline-flex items-center cursor-pointer">
           <svg
